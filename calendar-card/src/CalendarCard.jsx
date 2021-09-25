@@ -15,9 +15,7 @@ const style = {
 
 const CalendarCard = ({ dayOfDecember }) => {
     const [isClicked, setIsClicked] = useState(false);
-    var date1 = new Date();
-    var date2 = new Date("12/25/2021");
-    const daysUntilChristmas = Math.round((date2.getTime() - date1.getTime())/ (1000 * 3600 * 24));
+    const daysUntilChristmas = 24 - dayOfDecember;
     return (
         <div onClick={() => setIsClicked(!isClicked)} style={style}>
             {isClicked ? (

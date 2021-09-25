@@ -33,7 +33,16 @@ plugins: [
             calendar_card:
                 'calendar_card@http://localhost:3000/remoteEntry.js',
         },
-        shared: ['react', 'react-dom'],
+        shared: [{
+            "react": {
+                singleton: true,
+                eager: true,
+            },
+            "react-dom":{
+                singleton: true,
+                eager: true
+            }
+        }],
     }),
 ],
 };
